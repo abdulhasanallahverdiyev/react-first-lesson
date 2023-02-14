@@ -1,11 +1,16 @@
 import './App.css';
-
+import styles  from './App.module.css';
+import Test from './Test';
+import {  Title } from "./Components";
 function App() {
+  console.log(styles);
   return (
-    <div className="App">
-   
+    <div className={styles.App}>
+      
+   <Test/>
       <h3>{process.env.NODE_ENV}</h3>
-      <p>{process.env.REACT_APP_API_URL}</p>
+      <Title>{process.env.REACT_APP_API_URL}</Title>
+      <Title theme='dark'>{process.env.REACT_APP_API_URL}</Title>
       {
         process.env.NODE_ENV === 'production' && (
           <div>
